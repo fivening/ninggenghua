@@ -1,0 +1,15 @@
+{
+  "name": "servers",
+  "version": "1.0.0",
+  "description": "",
+  "main": "servers.js",
+  "scripts": {
+    "ngh": "node servers.js"
+  },
+  "author": "NingGengHua",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.3",
+    "socket.io": "^2.1.1"
+  }
+}

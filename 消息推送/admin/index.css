@@ -1,0 +1,11 @@
+button {
+  margin: 20px auto;
+}
+#content {
+  width: 500px;
+  height: 180px;
+  margin: 10px auto;
+}
+#content textarea {
+  resize: none;
+}

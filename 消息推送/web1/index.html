@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>客户版</title>
+    <link rel="stylesheet" href="./layui/css/layui.css">
+</head>
+<body>
+    <div style="width:100px;height:100px;margin:0 auto;line-height:100px;text-align:center;">
+            <i class="layui-icon layui-icon-dialogue" style="font-size: 30px; color: #333;cursor:pointer"></i>  
+    </div>
+    <ul style="width:200px;height:auto;margin:0 auto;">
+            
+    </ul>
+    
+        
+</body>
+</html>
+<script src="./socket.io.js"></script>
+<script src="./jquery.js"></script>
+<script src="./layui/layui.all.js"></script>
+<script>
+    let urlstr = location.href;
+
+    let name = {
+        name:urlstr.slice(urlstr.indexOf('uid=')+4)
+    }
+
+    console.log(name);
+
+    const IO = io.connect('ws://119.3.21.141:80');
+
+    IO.emit('sayname',name);
+
+    let flag = false;
+    
+    let str = '';
+
+    let dataarr = [];
+
+    let t;
+    IO.on('SendNews',function(data){
+        
+        dataarr.push(data);
+        
+        clearInterval(t);
+
+        t = setInterval(function(){
+            flag = !flag;
+            if(flag){
+                $('div i').css('color','#1E9FFF');
+            }else{
+                $('div i').css('color','#333');
+            }
+        },500);
+    })
+
+    $('div i').on('click',function(){
+        clearInterval(t);
+        flag = false;
+        $('div i').css('color','#333');
+        for(var i = 0; i<dataarr.length; i++){
+            $('ul').append('<li>'+dataarr[i]+'</li>');
+        }
+        dataarr = [];
+    })
+</script>
