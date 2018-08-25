@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>聊天室</title>
+    <link rel="stylesheet" href="./layui/css/layui.css">
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+<body>
+    <div class="content">
+        <!-- //登录 -->
+        <div class="login">
+            <div class="title">登录聊天室</div>
+            <div class="item">
+                <i class="layui-icon layui-icon-username"></i> 
+                <input type="text" placeholder="请输入账号" class="username"> 
+            </div>
+            <div class="item" style="margin-top:15px;">
+                <i class="layui-icon layui-icon-password"></i> 
+                <input type="password" placeholder="请输入密码" class="password"> 
+            </div>
+            <button class="item logup" style="margin:15px auto;">登录</button>
+        </div>
+
+        <!-- 聊天 -->
+        <div class="chatbox">
+            <div class="info">
+                <div class="tx"></div>
+                <div class="key">
+                    <div>SupCat 。</div>
+                    <div>除了吃什么都别叫我。。</div>
+                </div>
+            </div>
+            <div class="chat">
+                    <div class="layui-tab layui-tab-brief" lay-filter="docDemoTabBrief">
+                        <ul class="layui-tab-title">
+                            <li>消息</li>
+                            <li class="layui-this">联系人</li>
+                        </ul>
+                        <div class="layui-tab-content" style="height: 100px;">
+                            <div class="layui-tab-item">
+                                <div class="tx"></div>
+                                <div class="key">
+                                    <div>Alex 。</div>
+                                    <div>暂无消息</div>
+                                </div>
+                            </div>
+                            <div class="layui-tab-item layui-show">
+                                <div class="tx"></div>
+                                <div class="key">
+                                    <div>Alex 。</div>
+                                    <div>我若成佛天下无魔，我若成魔佛挡杀佛</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div> 
+            </div>
+        </div>
+
+        <!-- 聊天窗口 -->
+        <div class="window">
+            <div class="top"></div>
+            <div class="bottom">
+                <textarea></textarea>
+                <button class="close">关闭</button>
+                <button class="send">发送</button>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>
+<script src="./layui/layui.all.js"></script>
+<script src="./js/jquery.js"></script>
+<script src="./js/socket.io.js"></script>
+<script src="./js/index.js"></script>

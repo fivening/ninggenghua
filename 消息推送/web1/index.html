@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="./layui/css/layui.css">
 </head>
 <body>
+
+    
     <div style="width:100px;height:100px;margin:0 auto;line-height:100px;text-align:center;">
             <i class="layui-icon layui-icon-dialogue" style="font-size: 30px; color: #333;cursor:pointer"></i>  
     </div>
@@ -22,17 +24,15 @@
 <script src="./jquery.js"></script>
 <script src="./layui/layui.all.js"></script>
 <script>
-    let urlstr = location.href;
+    let urlstr = location.href;  
 
     let name = {
         name:urlstr.slice(urlstr.indexOf('uid=')+4)
-    }
+    };
 
-    console.log(name);
+    const IO = io.connect('ws://119.3.21.141:80');  //连接scoket
 
-    const IO = io.connect('ws://119.3.21.141:80');
-
-    IO.emit('sayname',name);
+    IO.emit('sayname',name);     //通知socket 用户上线
 
     let flag = false;
     

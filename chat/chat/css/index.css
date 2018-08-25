@@ -1,0 +1,184 @@
+.content {
+  position: absolute;
+  width: 100%;
+  background-image: linear-gradient(to top, #d9afd9 0%, #97d9e1 100%);
+  height: 100%;
+}
+* {
+  box-sizing: border-box;
+}
+.login {
+  width: 450px;
+  height: 300px;
+  position: absolute;
+  left: 50%;
+  margin-left: -225px;
+  top: 50%;
+  margin-top: -150px;
+  border-radius: 8px;
+  background-image: linear-gradient(to right, #00dbde 0%, #fc00ff 100%);
+  box-shadow: 0 0 5px #666;
+}
+.login .title {
+  width: 100%;
+  height: 100px;
+  line-height: 100px;
+  text-align: center;
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+}
+.login .item {
+  width: 60%;
+  height: 35px;
+  border: 1px solid #fff;
+  border-radius: 4px;
+  margin: 0 auto;
+  display: block;
+}
+.login .item .layui-icon {
+  display: block;
+  width: 15%;
+  height: 100%;
+  line-height: 35px;
+  text-align: center;
+  color: #fff;
+  font-weight: bold;
+  font-size: 20px;
+  float: left;
+}
+.login .item input {
+  display: block;
+  float: left;
+  width: 85%;
+  height: 100%;
+  border: none;
+  background: transparent;
+  color: #fff;
+}
+.login .item input::-webkit-input-placeholder {
+  color: #fff;
+}
+.login button.item {
+  background-image: linear-gradient(to top, #d9afd9 0%, #97d9e1 100%);
+  color: #fff;
+  cursor: pointer;
+}
+.chatbox {
+  width: 260px;
+  height: 600px;
+  position: absolute;
+  top: 50%;
+  margin-top: -300px;
+  right: 5%;
+  background-image: linear-gradient(to left bottom, #00dbde 0%, #fc00ff 100%);
+  border-radius: 8px;
+  overflow: hidden;
+  display: none;
+}
+.chatbox .info {
+  box-sizing: border-box;
+  width: 100%;
+  height: 100px;
+  padding: 25px 10px;
+}
+.chatbox .info .tx {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: url('../img/timg.jpg');
+  background-size: cover;
+  float: left;
+}
+.chatbox .info .key {
+  width: 190px;
+  height: 50px;
+  float: left;
+}
+.chatbox .info .key div {
+  box-sizing: border-box;
+  padding-left: 10px;
+  line-height: 25px;
+  width: 100%;
+  height: 25px;
+  font-weight: bold;
+}
+.chatbox .chat {
+  background: rgba(0, 0, 0, 0.3);
+  height: 490px;
+  width: 100%;
+}
+.layui-tab-item {
+  box-sizing: border-box;
+}
+.layui-tab-item .tx {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: url('../img/tx.jpg');
+  background-size: cover;
+  float: left;
+}
+.layui-tab-item .key {
+  width: 190px;
+  height: 50px;
+  float: left;
+}
+.layui-tab-item .key div {
+  box-sizing: border-box;
+  padding-left: 10px;
+  line-height: 25px;
+  width: 100%;
+  height: 25px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: #eee;
+  font-weight: bold;
+}
+.window {
+  width: 450px;
+  height: 500px;
+  background: #fff;
+}
+.window .top {
+  width: 100%;
+  height: 375px;
+}
+.window .bottom {
+  width: 100%;
+  height: 125px;
+  border-top: 1px solid #ccc;
+  background: #eee;
+  position: relative;
+}
+.window .bottom textarea {
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 5px 5px 25px 5px;
+  border: none;
+  background: transparent;
+  resize: none;
+}
+.window .bottom button {
+  position: absolute;
+  display: block;
+  border: none;
+  width: 60px;
+  height: 20px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.window .bottom .send {
+  background: teal;
+  color: #333;
+  right: 10px;
+  bottom: 5px;
+}
+.window .bottom .close {
+  background: #fff;
+  color: #333;
+  right: 80px;
+  bottom: 5px;
+}
